@@ -13,8 +13,15 @@ quiz_questions = [
         "options": ["A) 3", "B) 4", "C) 5", "D) 22"],
         "answer": "B"
     },
+    {
+        "question": "Which country has won the most FIFA World Cup titles?",
+        "options": ["A) France,", "B) Itlay", "c) Argentina", "D) England"],
+        "answer": "C"
+    }
     # Learners can add more questions here following the same structure
 ]
+
+score=0
 
 # Loop through each question
 for question in quiz_questions:
@@ -29,8 +36,10 @@ for question in quiz_questions:
     # Check if the answer is correct
     if user_answer == question["answer"]:
         print("Correct!")
+        score= score + 1
     else:
         print(f"Wrong! The correct answer was {question['answer']}.")
 
 # Goodbye message
+print(f"Congrats for taking part . Your total score is  {score}")
 print("Thanks for playing the Pub Quiz!")
